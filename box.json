@@ -1,0 +1,10 @@
+{
+  "alias": "aws.phar",
+  "chmod": "0755",
+   "main": "bin/zf.php",
+  "directories": [
+    "library","bin"
+  ],
+  "output": "aws-zf.phar",
+  "stub": true
+}
