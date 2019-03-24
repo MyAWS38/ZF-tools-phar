@@ -160,20 +160,21 @@ class Zend_Tool_Framework_Client_Console_HelpSystem
          * @see Zend_Version
          */
         require_once 'Zend/Version.php';
-$this->_response->appendContent('	----------------------------------------------------------------------------------');
 	$logo = "
+	------------------------------------------------------------------------------------------------------------------+
 	 _____                  __   ______              ___ _       _______                       _           __ 
 	/__  /  ___  ____  ____/ /  / ____/___  _____   /   | |     / / ___/   ____  _________    (_)__  _____/ /_
 	  / /  / _ \/ __ \/ __  /  / /_  / __ \/ ___/  / /| | | /| / /\__ \   / __ \/ ___/ __ \  / / _ \/ ___/ __/
 	 / /__/  __/ / / / /_/ /  / __/ / /_/ / /     / ___ | |/ |/ /___/ /  / /_/ / /  / /_/ / / /  __/ /__/ /_  
 	/____/\___/_/ /_/\__,_/  /_/    \____/_/     /_/  |_|__/|__//____/  / .___/_/   \____/_/ /\___/\___/\__/  
 		                                                           /_/              /___/                 
-
 	" ; 
 	$this->_response->appendContent($logo ,  array('color' => 'cyan'));
-        $this->_response->appendContent('	Zend Framework Generator', array('color' => array('hiWhite'), 'separator' => false));
-        $this->_response->appendContent('	Command Line Console Tool v' . Zend_Version::VERSION . '');
-	$this->_response->appendContent('										     ');
+
+        $this->_response->appendContent('	Command Line Console             : '. Zend_Version::VERSION . '');
+		$this->_response->appendContent('	Last Build                       : 24-03-2019 17h16');
+		$this->_response->appendContent('	Author                           : nadir.fouka@aws-france.com');
+	$this->_response->appendContent('	------------------------------------------------------------------------------------------------------------------+');
         return $this;
     }
 
