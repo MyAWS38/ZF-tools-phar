@@ -359,10 +359,16 @@ class ZF
             return;
         }
         
-        $zfIncludePath['relativePath'] = '/home/nadir/Documents/ZendFramework-1.10.1-minimal/library/';
+        $zfIncludePath['relativePath'] = getcwd()."/library/" ;
+	//print "path1 :".getcwd()."/library/"."\n" ; 
+	//print "path2 :".$zfIncludePath['relativePath']."\n" ; 
+	print realpath($zfIncludePath['relativePath']) . PATH_SEPARATOR . get_include_path() ; 
+	print realpath($zfIncludePath['relativePath']) ; 
         if (file_exists($zfIncludePath['relativePath'] . 'Zend/Tool/Framework/Client/Console.php')) {
             set_include_path(realpath($zfIncludePath['relativePath']) . PATH_SEPARATOR . get_include_path());
         }
+
+
     
         if (!$this->_tryClientLoad()) {
             $this->_mode = 'runError';
